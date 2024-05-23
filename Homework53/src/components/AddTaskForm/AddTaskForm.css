@@ -1,0 +1,22 @@
+.taskForm {
+  display: flex;
+  align-items: center;
+}
+
+.textInput {
+  width: 50%;
+  height: 40px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  background-color: lightgray;
+  margin-left: 20px;
+}
