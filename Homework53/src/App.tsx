@@ -11,13 +11,21 @@ const App = () => {
     {taskText: 'Water flowers', id: '3'},
   ]);
 
+  const createTask = (newTask: TypeTask) => {
+    setTasks((prevTasks) => {
+      return [...prevTasks, newTask];
+
+    });
+
+  };
+
   return (
     <>
       <h2>Create your tasks list:</h2>
-      <AddTaskForm/>
+      <AddTaskForm onSubmit={createTask}/>
       <div className="container">
         {tasks.map((task) => {
-          return <Task key={task.id} task={task.taskText}/>
+          return <Task key={task.id} task={task.taskText} />;
         })}
       </div>
     </>
