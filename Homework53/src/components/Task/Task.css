@@ -1,3 +1,23 @@
 .taskItem {
   font-size: 18px;
 }
+
+.taskContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 57%;
+}
+
+.deleteBtn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: tomato;
+  color: white;
+}

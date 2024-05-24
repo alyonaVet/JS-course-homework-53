@@ -14,9 +14,13 @@ const App = () => {
   const createTask = (newTask: TypeTask) => {
     setTasks((prevTasks) => {
       return [...prevTasks, newTask];
-
     });
 
+  };
+  const deleteTask = (id: string) => {
+    setTasks((prevTask) => {
+      return prevTask.filter((task) => task.id !== id);
+    });
   };
 
   return (
@@ -25,7 +29,7 @@ const App = () => {
       <AddTaskForm onSubmit={createTask}/>
       <div className="container">
         {tasks.map((task) => {
-          return <Task key={task.id} task={task.taskText} />;
+          return <Task key={task.id} task={task.taskText} onRemove={() => deleteTask(task.id)} />;
         })}
       </div>
     </>
